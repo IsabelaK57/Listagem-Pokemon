@@ -1,0 +1,127 @@
+/*criação do fundo, colocação da fonte e margens*/
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: rgb(203, 203, 204);
+    color: rgb(49, 49, 49);
+}
+/*como ficara quando o modo escuro for ativado, color da fonte e cor de fundo*/
+body.modo-escuro{
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 2, 37);
+}
+/*barra de navegação da pagina, cabecalho*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+/*tamanho das imagens e pegueno movimento ao passar o mouse em cima*/
+header .logo,
+header .imagem-botao{
+    width: 30px;
+    transition: 0.2s ease-in-out;
+}
+/*tirar fundo e borda das imagens no cabecalho*/
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+}
+/*o que vai acontecer quando passar o mouse nas imagens e cartoes pokemon*/
+header .logo:hover,
+header .imagem-botao:hover,
+main .cartao-pokemon:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+/*largura do conteudo da pagina*/
+main{
+    padding: 25px;
+}
+/*como sera posicionado os cartoes do pokemon*/
+main .listagem_pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+/*cor dos cartoes, largura, bordar e informacoes do cartao*/
+main .cartao-pokemon{
+    background-color: #b3b2f8;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+}
+/*como ficara a cor do scartoes ao passar o mouse*/
+main .cartao-pokemon:hover{
+    background-color: #79c1fc;
+}
+/*cor dos cartoes no modo escuro*/
+.modo-escuro .cartao-pokemon{
+    background-color: #7b79fd;
+}
+.modo-escuro .cartao-pokemon:hover{
+    background-color: #6391f3;
+}
+/*nomes dos pokemons*/
+main .cartao-pokemon .informacoes{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+main .cartao-pokemon .informacoes span{
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+main .cartao-pokemon .gif{
+    width: 90px;
+    height: 90px;
+}
+
+main .cartao-pokemon .tipos{
+    display: flex;
+    gap: 15px;
+    border-radius: 10px;
+}
+
+main .cartao-pokemon .tipo{
+    padding: 8px;
+    border-radius: 10px;
+}
+/*cores dos elementos*/
+.grama{
+    background-color: #7ac74c;
+}
+
+.veneno {
+    background-color: #df67ddfb;
+}
+
+.fogo{
+    background-color: #ee8130;
+}
+
+.agua{
+    background-color: #6390f0;
+}
+
+.inseto{
+    background-color: #a6b91a;
+}
+/*descricao dos cartoes, cor, fonte, tamanhos*/
+main .descricao{
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+}
